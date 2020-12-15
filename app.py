@@ -22,8 +22,6 @@ def home():
     items=db.items.find()
     for item in items:
         print(item)
-        print()
-        print(item['Headline'])
     # Return template and data
     return render_template("index.html", headline=item['Headline'], 
     table=item['FactTable'],featured=item['Featured Image'],text=item['Text'],HIm=item['Hemisphere Images'])
