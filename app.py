@@ -25,8 +25,8 @@ def home():
         print()
         print(item['Headline'])
     # Return template and data
-    return "<h1>Thanks for visiting the page</h1>" 
-    # return render_template("index.html", vacation=destination_data)
+    return render_template("index.html", headline=item['Headline'], 
+    table=item['FactTable'],featured=item['Featured Image'],text=item['Text'],HIm=item['Hemisphere Images'])
 
 
 # Route that will trigger the scrape function

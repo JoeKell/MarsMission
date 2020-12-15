@@ -59,6 +59,6 @@ def scrape():
     Scrape_Dict={"Headline":News_Title,
     "Text":News_P,
     "Featured Image":FeaturedImage,
-    "Fact Table":MF_Table,
+    "FactTable" : MF_Table,
     "Hemisphere Images":hemisphere_image_urls}
     return Scrape_Dict

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta charset="UTF-8">
+    <title>Mars Mission Update</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<nav class="navbar navbar-expand-lg bg-dark navbar-dark" id="fun">
+    <!-- This is the branded Label in the upper left -->
+    <a class="Latitude" class="navbar-brand" href="#"><b>Mars</b></a>
+    <!-- Hamburger Button -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <!-- This groups the nav links in the upper right -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="scrape">Scrape Now!</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+
+
+<body>
+  <div class="compcont">
+
+        <h2>Latest Mars News</h2>
+        <h3>{{headline}}</h3>
+        <p>{{text}}</p>
+        <br>
+        <br>
+        <h2>Featured Mars Image</h2>
+        <img src={{featured}} style="width:500px;height:500px;">
+        <br>
+        <br>
+        {{table}}
+        <br>
+        <br>
+        <h1>Hemisphere Photos</h1>
+        <hr>
+        <div class="row">
+            <div class="col-lg-6">
+                <h3>{{HIm[0]["title"]}}</h3>
+                <img src={{HIm[0].img_url}} class="compvis">
+            </div>
+            <div class="col-lg-6">
+                <h3>{{HIm[1]['title']}}</h3>
+                <img src={{HIm[1].img_url}} class="compvis">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6">
+                <h3>{{HIm[2]['title']}}</h3>
+                <img src={{HIm[2].img_url}} class="compvis">
+            </div>
+            <div class="col-lg-6">
+                <h3>{{HIm[3]['title']}}</h3>
+                <img src={{HIm[3].img_url}} class="compvis">
+            </div>
+        </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+
+
+
+</html>
